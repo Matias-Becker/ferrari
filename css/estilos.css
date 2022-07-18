@@ -108,10 +108,15 @@ h1{
 }
 
 button{
-    background-color: rgb(58, 58, 58);
-    border: rgb(58, 58, 58) solid 10px;
+    background-image: linear-gradient( rgb(94, 94, 94), rgb(58, 58, 58));
+    border: rgb(58, 58, 58) solid 2px;
     font-family: 'Roboto', sans-serif;
     color: white;
+}
+
+button:hover{
+    background-image: linear-gradient(rgb(58, 58, 58),  rgb(94, 94, 94));
+    transform: scale(1.25, 1.25);
 }
 
 .main__noti{

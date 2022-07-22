@@ -17,19 +17,59 @@
 </head>
 <body>
     <header>
-        <nav>
-            <img class="header__logo" src="../recursos/favicon.ico" alt="">
-            <ul class="header__lista">
-                <li class="header__item"><a href="../index.html">Inicio</a></li>
-                <li class="header__item"><a href="#">Modelos</a></li>
-                <li class="header__item"><a href="pagina_dos.html">Historia</a></li>
-                <li class="header__item"><a href="pagina_tres.html">Scuderia</a></li>
-                <li class="header__item"><a href="pagina_cuatro.html">Articulos</a></li>
-            </ul>
+        <nav class="navbar navbar-expand-lg bg-light">
+            <div>
+                <a class="navbar-brand" href="../index.html">
+                    <img src="../recursos/favicon.ico" alt="">
+                </a>
+            </div>
+            <div class="container-fluid">
+                <a class="navbar-brand" href="../index.html">Inicio</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav">
+                        <li class="nav-item">
+                        <a class="nav-link" href="#">Modelos</a>
+                        </li>
+                        <li class="nav-item">
+                        <a class="nav-link" href="pagina_dos.html">Historia</a>
+                        </li>
+                        <li class="nav-item">
+                        <a class="nav-link" href="pagina_tres.html">Scuderia</a>
+                        </li>
+                        <li class="nav-item">
+                        <a class="nav-link" href="pagina_cuatro.html">Articulos</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
         </nav>
     </header>
     <main>
         <h1>Modelos</h1>
+        <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img src="https://images.unsplash.com/photo-1575888787889-edfd68017c16?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NTV8fGZlcnJhcml8ZW58MHwwfDB8fA%3D%3D&auto=format&fit=crop&w=400&q=60" class="carrusel__img" alt="...">
+                </div>
+                <div class="carousel-item">
+                    <img src="https://images.unsplash.com/photo-1596809429234-e577f0c8e1c7?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MjZ8fGZlcnJhcml8ZW58MHwwfDB8fA%3D%3D&auto=format&fit=crop&w=400&q=60" class="carrusel__img" alt="...">
+                </div>
+                <div class="carousel-item">
+                    <img src="https://images.unsplash.com/photo-1621687259652-1b680d458fbb?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NTh8fGZlcnJhcml8ZW58MHwwfDB8fA%3D%3D&auto=format&fit=crop&w=400&q=60" class="carrusel__img" alt="...">
+                </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
+        </div>
         <h2>F8 Tributo</h2>
         <section class="modelo__uno"> <!-- Sección F8 Tributo -->
             <p class="modelo__parrafo">El Ferrari F8 Tributo es un superdeportivo de motor central-trasero. El automóvil es una actualización del 488 con notables cambios exteriores y de rendimiento. Fue presentado en el Salón del Automóvil de Ginebra 2019. El F8 Tributo utiliza el mismo motor del 488 Pista, un motor V8 de Biturbo de 3902 cm³ (3,9 litros), con una potencia de 720 CV (710 HP; 530 kW) a las 7.000 rpm y 770 N·m (568 lb·pie) a las 3250 rpm de par máximo, que lo convierte en el Ferrari V8 convencional más potente producido hasta la fecha.</p>

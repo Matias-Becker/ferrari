@@ -17,19 +17,59 @@
 </head>
 <body>
     <header>
-        <nav>
-            <img class="header__logo" src="../recursos/favicon.ico" alt="">
-            <ul class="header__lista">
-                <li class="header__item"><a href="../index.html">Inicio</a></li>
-                <li class="header__item"><a href="pagina_uno.html">Modelos</a></li>
-                <li class="header__item"><a href="#">Historia</a></li>
-                <li class="header__item"><a href="pagina_tres.html">Scuderia</a></li>
-                <li class="header__item"><a href="pagina_cuatro.html">Articulos</a></li>
-            </ul>
+        <nav class="navbar navbar-expand-lg bg-light">
+            <div>
+                <a class="navbar-brand" href="../index.html">
+                    <img src="../recursos/favicon.ico" alt="">
+                </a>
+            </div>
+            <div class="container-fluid">
+                <a class="navbar-brand" href="../index.html">Inicio</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav">
+                        <li class="nav-item">
+                        <a class="nav-link" href="pagina_uno.html">Modelos</a>
+                        </li>
+                        <li class="nav-item">
+                        <a class="nav-link" href="#">Historia</a>
+                        </li>
+                        <li class="nav-item">
+                        <a class="nav-link" href="pagina_tres.html">Scuderia</a>
+                        </li>
+                        <li class="nav-item">
+                        <a class="nav-link" href="pagina_cuatro.html">Articulos</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
         </nav>
     </header>
     <main>
         <h1>Historia</h1>
+        <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img src="https://images.unsplash.com/photo-1575888787889-edfd68017c16?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NTV8fGZlcnJhcml8ZW58MHwwfDB8fA%3D%3D&auto=format&fit=crop&w=400&q=60" class="carrusel__img" alt="...">
+                </div>
+                <div class="carousel-item">
+                    <img src="https://images.unsplash.com/photo-1596809429234-e577f0c8e1c7?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MjZ8fGZlcnJhcml8ZW58MHwwfDB8fA%3D%3D&auto=format&fit=crop&w=400&q=60" class="carrusel__img" alt="...">
+                </div>
+                <div class="carousel-item">
+                    <img src="https://images.unsplash.com/photo-1621687259652-1b680d458fbb?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NTh8fGZlcnJhcml8ZW58MHwwfDB8fA%3D%3D&auto=format&fit=crop&w=400&q=60" class="carrusel__img" alt="...">
+                </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
+        </div>
         <section class="main__historia">
             <img class="his_img_uno" src="https://images.unsplash.com/photo-1600858963273-2db83fb37043?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTQxfHxmZXJyYXJpfGVufDB8MXwwfHw%3D&auto=format&fit=crop&w=400&q=60" alt="">
             <img class="his_img_dos" src="https://images.unsplash.com/photo-1626668893659-72b12ad8f891?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mzh8fGZlcnJhcml8ZW58MHx8MHx8&auto=format&fit=crop&w=400&q=60" alt="">
@@ -41,11 +81,11 @@
             Sin embargo, la llegada de la Segunda Guerra Mundial y la Guerra Fría truncaron todos sus planes en las carreras de competición y tuvo que esperar hasta 1947 a lanzar el primer automóvil con la marca Ferrari, el 125 Sport. Una fecha señalada dentro de la historia de esta firma.
             Los éxitos conseguidos en las 24 Horas de Le Mans en 1949, el Gran Premio de F1 en 1951 y el Campeonato del Mundo de Fórmula 1 en 1952 fueron solo el principio de lo que estaba por llegar para esta leyenda del motor.
             El gran potencial y la alianza de Fiat en 1969 hicieron que Ferrari pudiera centrarse en la construcción de modelos orientados únicamente a la alta gama.</p> 
-            <section class="main__historia--galeria">
-                <img class="his_img_cuatro" src="https://images.unsplash.com/photo-1528561404880-67a16c7f9860?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NDh8fGZlcnJhcml8ZW58MHx8MHx8&auto=format&fit=crop&w=400&q=60" alt="">
-                <img class="his_img_cinco" src="https://images.unsplash.com/photo-1608905850015-eac16d944723?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MjMwfHxmZXJyYXJpfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=400&q=60" alt="">
-                <img class="his_img_seis" src="https://images.unsplash.com/photo-1571128184290-bd92e867efac?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTkxfHxmZXJyYXJpfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=400&q=60" alt="">
-            </section>
+        <section class="main__historia--galeria">
+            <img class="his_img_cuatro" src="https://images.unsplash.com/photo-1528561404880-67a16c7f9860?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NDh8fGZlcnJhcml8ZW58MHx8MHx8&auto=format&fit=crop&w=400&q=60" alt="">
+            <img class="his_img_cinco" src="https://images.unsplash.com/photo-1608905850015-eac16d944723?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MjMwfHxmZXJyYXJpfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=400&q=60" alt="">
+            <img class="his_img_seis" src="https://images.unsplash.com/photo-1571128184290-bd92e867efac?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTkxfHxmZXJyYXJpfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=400&q=60" alt="">
+        </section>
     </main>
     <footer>
         <img class="footer__imagen" src="https://images.unsplash.com/photo-1618243615611-f64ebcb16f36?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Nzl8fHR3aXR0ZXIlMjBsb2dvfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=400&q=60" alt="">

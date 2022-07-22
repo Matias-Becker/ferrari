@@ -17,20 +17,60 @@
 </head>
 <body>
     <header>
-        <nav>
-            <img class="header__logo" src="recursos/favicon.ico" alt="">
-            <ul class="header__lista"> 
-                <li class="header__item"><a href="#">Inicio</a></li>
-                <li class="header__item"><a href="paginas/pagina_uno.html">Modelos</a></li>
-                <li class="header__item"><a href="paginas/pagina_dos.html">Historia</a></li>
-                <li class="header__item"><a href="paginas/pagina_tres.html">Scuderia</a></li>
-                <li class="header__item"><a href="paginas/pagina_cuatro.html">Articulos</a></li>
-            </ul>
+        <nav class="navbar navbar-expand-lg bg-light">
+            <div>
+                <a class="navbar-brand" href="#">
+                    <img src="recursos/favicon.ico" alt="">
+                </a>
+            </div>
+            <div class="container-fluid">
+                <a class="navbar-brand" href="#">Inicio</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav">
+                        <li class="nav-item">
+                        <a class="nav-link" href="paginas/pagina_uno.html">Modelos</a>
+                        </li>
+                        <li class="nav-item">
+                        <a class="nav-link" href="paginas/pagina_dos.html">Historia</a>
+                        </li>
+                        <li class="nav-item">
+                        <a class="nav-link" href="paginas/pagina_tres.html">Scuderia</a>
+                        </li>
+                        <li class="nav-item">
+                        <a class="nav-link" href="paginas/pagina_cuatro.html">Articulos</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
         </nav>
     </header>
     <main>
         <div class="main__inicio">
             <h1>Inicio</h1>
+        </div>
+        <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img src="https://images.unsplash.com/photo-1575888787889-edfd68017c16?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NTV8fGZlcnJhcml8ZW58MHwwfDB8fA%3D%3D&auto=format&fit=crop&w=400&q=60" class="carrusel__img" alt="...">
+                </div>
+                <div class="carousel-item">
+                    <img src="https://images.unsplash.com/photo-1596809429234-e577f0c8e1c7?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MjZ8fGZlcnJhcml8ZW58MHwwfDB8fA%3D%3D&auto=format&fit=crop&w=400&q=60" class="carrusel__img" alt="...">
+                </div>
+                <div class="carousel-item">
+                    <img src="https://images.unsplash.com/photo-1621687259652-1b680d458fbb?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NTh8fGZlcnJhcml8ZW58MHwwfDB8fA%3D%3D&auto=format&fit=crop&w=400&q=60" class="carrusel__img" alt="...">
+                </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
         </div>
         <p class="main__parrafo">Ferrari es una compañía de automóviles deportivos con sede en Maranello-Módena (Emilia-Romaña, Italia). Este fabricante es el resultante de la idea de su fundador Enzo Ferrari de crear una marca de automóviles de turismo con prestaciones lujosas y deportivas, basándose en los éxitos obtenidos a partir de la creación de su Scuderia Ferrari de automovilismo en 1929.</p>
         <section class="main__galeria">
@@ -41,7 +81,33 @@
             <div class="img_cinco"></div>
             <div class="img_seis"></div> 
         </section>
-        <section class="main__noticias">
+        <div class="main__titulo">
+            <h2>Noticias</h2>
+        </div>
+        <section class="card-group">
+            <div class="card">
+                <img src="https://images.unsplash.com/photo-1605563707210-d6c75cd53963?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NXx8ZmVycmFyaSUyMGYxfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=400&q=60" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title">Charles Leclerc se queda con la Pole</h5>
+                    <p class="card-text">El Monegasco largará en la primera posición luego de realizar una gran clasificación.</p>
+                </div>
+            </div>
+            <div class="card">
+                <img src="https://images.unsplash.com/photo-1609100846580-54a309a0a43e?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MjN8fGZlcnJhcmlzfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=400&q=60" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title">Inauguración de "Mundo Ferrari"</h5>
+                    <p class="card-text">El nuevo parque temático cuenta con las mejores y mas innovadoras atracciones.</p>
+                </div>
+            </div>
+            <div class="card">
+                <img src="https://images.unsplash.com/photo-1455138183306-12dfce6f541b?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8OTR8fGZlcnJhcmlzfGVufDB8fDB8fA==&auto=format&fit=crop&w=400&q=60" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title">Encuentro anual de Ferraris</h5>
+                    <p class="card-text">El prestigioso evento se realizó en Maranello y contó con una gran cantidad de participantes.</p>
+                </div>
+            </div>
+        </section>
+        <!-- <section class="main__noticias">
             <article class="main__noti--titulo">
                 <h2>Noticias</h2>
             </article>
@@ -65,7 +131,7 @@
                 <p>Encuentro anual de Ferraris en Maranello</p>
                 <button>Ver Mas</button>
             </article>
-        </section>
+        </section> --> 
     </main>
     <footer>
         <img class="footer__imagen" src="https://images.unsplash.com/photo-1618243615611-f64ebcb16f36?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Nzl8fHR3aXR0ZXIlMjBsb2dvfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=400&q=60" alt="">

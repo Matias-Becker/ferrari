@@ -20,12 +20,12 @@ h1{
     font-family: 'Lato', sans-serif;
     font-size: 80px;
 }
-.main__inicio{
+/* .main__inicio{
     background-image: url("https://images.unsplash.com/photo-1604172497384-6fea2a1e7092?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTAxfHxmZXJyYXJpfGVufDB8MHwwfHw%3D&auto=format&fit=crop&w=400&q=60");
     background-size: cover;
     width: 100vw;
     height: 100vh;
-}
+} */
 
 .main__parrafo{
     font-family: 'Roboto', sans-serif;
@@ -149,8 +149,8 @@ h1{
     padding-top: 40px;
 }
 
-.card-group{
-    margin: 30px;
+.card-img-top{
+    height: 300px;
 }
 /* Termina sección index */
 
@@ -211,30 +211,10 @@ h2{
 
 .his_img_tres{
     width: 320px;
+    height: 525px;
     grid-area: his_img_tres;
 }
 
-.main__historia--galeria{
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: 1fr;
-    grid-template-areas: "his_img_cuatro his_img_cinco his_img_seis";
-}
-
-.his_img_cuatro{
-    width: 300px;
-    grid-area: his_img_cuatro;
-}
-
-.his_img_cinco{
-    width: 300px;
-    grid-area: his_img_cinco;
-}
-
-.his_img_seis{
-    width: 300px;
-    grid-area: his_img_seis;
-    background-image: url();
-}
 /* Finaliza contenido de pagina_dos */
 /* Comienza contenido de pagina_tres */
 
@@ -360,7 +340,6 @@ h2{
 /* Finaliza contenido de pagina_cuatro */
 footer{
     background-color:rgb(58, 58, 58);
-    margin: 40px 0px 0px 0px;
 }
 
 .footer__imagen{

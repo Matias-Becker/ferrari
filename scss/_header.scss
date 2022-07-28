@@ -1,0 +1,17 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+
+.navbar{
+    &-brand{
+        font-size: 25px;
+    }
+}
+
+.nav{
+    &-item{
+        padding: 0px 20px;
+        font-size: 25px;
+    }
+}

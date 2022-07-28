@@ -1,0 +1,31 @@
+h2{
+    font-family: $letra-titulos;
+    font-size: 35px;
+}
+
+.modelo{
+    &__uno{
+        display: flex;
+    } 
+    &__dos{
+        display: flex;
+    }
+    &__tres{
+        display: flex;
+    }
+    &__cuatro{
+        display: flex;
+    }
+    &__cinco{
+        display: flex;
+    }
+    &__parrafo{
+        font-family: $letra-principal;
+        font-size: 20px;
+    }
+    &__img{
+        width: 350px;
+        height: 450px;
+    }
+}
+

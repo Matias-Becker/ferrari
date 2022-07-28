@@ -1,0 +1,26 @@
+.main{
+    &__historia{                              
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: 1fr;
+        grid-template-areas: "his_img_uno his_img_dos his_img_tres"
+    }
+}
+
+.his__img{
+    &_uno{
+        grid-area: his_img_uno;
+        width: 350px;
+    }
+
+    &_dos{
+        grid-area: his_img_dos;
+        width: 350px;
+    }
+
+    &_tres{
+        width: 320px;
+        height: 525px;
+        grid-area: his_img_tres;
+    }
+}

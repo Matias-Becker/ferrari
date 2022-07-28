@@ -1,0 +1,125 @@
+/* Media querie celular */
+@media (min-width: 320px) and (max-width: 575px) {
+.main{
+    /* Media del Main Index */
+    &__galeria{
+        width: 100vw;
+        height: 380vh;
+        display: grid;
+        row-gap: 20px;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
+        grid-template-areas: "img_uno"
+                            "img_dos"
+                            "img_tres"
+                            "img_cuatro"
+                            "img_cinco"
+                            "img_seis"
+    }
+
+    /* Media de Main Pagina Dos */
+    &__historia{                              
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr 1fr;
+        grid-template-areas: "his_img_uno"
+                            "his_img_dos"
+                            "his_img_tres"
+    }
+
+    /* Media Main Pagina Tres */
+    &__scuderia{                           
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
+        grid-template-areas: "scuderia__img--uno"
+                            "scuderia__img--dos"
+                            "scuderia__img--tres"
+                            "scuderia__img--cuatro"
+                            "scuderia__img--cinco"
+                            "scuderia__img--seis"
+    }
+    /* Media Main pagina Cuatro */
+    &__articulos{
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-row: 1fr 1fr 1fr;
+        row-gap: 15px;
+    }
+}
+
+.arti{
+    &_uno{
+        grid-column: 1/2;
+        grid-row: 1/2;
+    }
+
+    &_dos{
+        grid-column: 1/2;
+        grid-row:  2/3;
+    }
+
+    &_tres{
+        grid-column: 1/2;
+        grid-row:  3/4;
+    }
+}
+}
+/* Media querie tablet  */
+@media (min-width: 576px) and (max-width: 992px) {
+.main{
+    /* Media del Main Index */
+    &__galeria{
+        width: 100vw;
+        height: 100vh;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr 1fr;
+        grid-template-areas: "img_uno img_dos"
+                            "img_tres img_cuatro"
+                            "img_cinco img_seis"
+    }
+    /* Media de Main Pagina Dos */
+    &__historia{                              
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr;
+        grid-template-areas: "his_img_uno"
+                            "his_img_dos"
+                            "his_img_tres"
+    }
+
+    /* Media Main Pagina Tres */
+    &__scuderia{                           
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr 1fr;
+        grid-template-areas: "scuderia__img--uno scuderia__img--dos"
+                            "scuderia__img--tres scuderia__img--cuatro"
+                            "scuderia__img--cinco scuderia__img--seis"
+    }
+    /* Media Main pagina Cuatro */
+    &__articulos{
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-row: 1fr 1fr 1fr;
+        row-gap: 15px;
+    }
+}
+.arti{
+    &_uno{
+        grid-column: 1/2;
+        grid-row: 1/2;
+    }
+
+    &_dos{
+        grid-column: 1/2;
+        grid-row:  2/3;
+    }
+
+    &_tres{
+        grid-column: 1/2;
+        grid-row:  3/4;
+    }
+}
+}

@@ -19,50 +19,38 @@
 
 .scuderia__img{
     &--uno{
+        @extend .imagen-grids;
         grid-area: scuderia__img--uno;
         background-image: url(https://images.unsplash.com/photo-1563395163295-7e3e8e3dea81?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTUzfHxmZXJyYXJpfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=400&q=60);
-        background-size: cover;
-        background-position: center;
-        background-repeat: no-repeat;
         }
 
     &--dos{
+        @extend .imagen-grids;
         grid-area: scuderia__img--dos;
         background-image: url(https://images.unsplash.com/photo-1537029114708-467d4a6f3f16?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NjB8fHNjdWRlcmlhJTIwZmVycmFyaXxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=400&q=60);
-        background-size: cover;
-        background-position: center;
-        background-repeat: no-repeat;
     }
 
     &--tres{
+        @extend .imagen-grids;
         grid-area: scuderia__img--tres;
         background-image: url(https://images.unsplash.com/photo-1605563707210-d6c75cd53963?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NXx8ZmVycmFyaSUyMGYxfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=400&q=60);
-        background-size: cover;
-        background-position: center;
-        background-repeat: no-repeat;
     }
 
     &--cuatro{
+        @extend .imagen-grids;
         grid-area: scuderia__img--cuatro;
         background-image: url(https://images.unsplash.com/photo-1514770198934-d632356140ce?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mjd8fGZlcnJhcmklMjBmMXxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=400&q=60);
-        background-size: cover;
-        background-position: center;
-        background-repeat: no-repeat;
     }
 
     &--cinco{
+        @extend .imagen-grids;
         grid-area: scuderia__img--cinco;
         background-image: url(https://images.unsplash.com/flagged/photo-1577655522259-3bb351ccb888?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MjJ8fGZlcnJhcmklMjBmMXxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=400&q=60);
-        background-size: cover;
-        background-position: center;
-        background-repeat: no-repeat;
     }
 
     &--seis{
+        @extend .imagen-grids;
         grid-area: scuderia__img--seis;
         background-image: url(https://images.unsplash.com/photo-1641999863846-760d6ed3f69a?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTB8fHNjaHVtYWNoZXJ8ZW58MHx8MHx8&auto=format&fit=crop&w=400&q=60);
-        background-size: cover;
-        background-position: center;
-        background-repeat: no-repeat;
     }
 }

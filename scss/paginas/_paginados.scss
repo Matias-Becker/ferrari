@@ -9,18 +9,20 @@
 
 .his__img{
     &_uno{
+        height: 500px;
+        width: 51vh;
         grid-area: his_img_uno;
-        width: 350px;
     }
 
     &_dos{
+        height: 500px;
+        width: 51vh;
         grid-area: his_img_dos;
-        width: 350px;
     }
 
     &_tres{
-        width: 320px;
-        height: 525px;
+        height: 500px;
+        width: 51vh;
         grid-area: his_img_tres;
     }
 }

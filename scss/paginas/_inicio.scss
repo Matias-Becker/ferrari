@@ -2,23 +2,24 @@ h1{
     font-family: $letra-titulos;
     font-size: 80px;
 }
-/* .main__inicio{
-    background-image: url("https://images.unsplash.com/photo-1604172497384-6fea2a1e7092?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTAxfHxmZXJyYXJpfGVufDB8MHwwfHw%3D&auto=format&fit=crop&w=400&q=60");
-    background-size: cover;
-    width: 100vw;
-    height: 100vh;
-} */
+
+.carrusel{
+    &__img{
+        width: 100vw;
+        height: 70vh;
+    }
+}
+
 .main{
     &__parrafo{
         font-family: $letra-principal;
         font-size: 20px;
         text-align: center;
-        padding: 50px 16px;
+        padding: 50px;
     }               
 
     &__galeria{
-        width: 100vw;
-        height: 100vh;
+        height: 100vh; 
         display: grid;
         grid-template-columns: 1fr 1fr 1fr;
         grid-template-rows: 1fr 1fr 1fr;

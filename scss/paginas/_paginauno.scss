@@ -1,23 +1,29 @@
 h2{
     font-family: $letra-titulos;
     font-size: 35px;
+    padding: 0px 16px;
 }
 
 .modelo{
     &__uno{
         display: flex;
+        padding: 0px 20px;
     } 
     &__dos{
         display: flex;
+        padding: 0px 20px;
     }
     &__tres{
         display: flex;
+        padding: 0px 20px;
     }
     &__cuatro{
         display: flex;
+        padding: 0px 20px;
     }
     &__cinco{
         display: flex;
+        padding: 0px 20px;
     }
     &__parrafo{
         font-family: $letra-principal;

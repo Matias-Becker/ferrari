@@ -1,101 +1,88 @@
-let carrito=[]
 
-const productoContenedor= document.getElementById("producto-contenedor") //revisar
+const contenedorProductos = document.getElementById('contenedor-productos')
+const contenedorCarrito = document.getElementById('carrito-contenedor')
+const botonVaciar = document.getElementById('vaciar-carrito')
+const contadorCarrito = document.getElementById('contadorCarrito')
+const cantidad = document.getElementById('cantidad')
+const precioTotal = document.getElementById('precioTotal')
+const cantidadTotal = document.getElementById('cantidadTotal')
 
-productoContenedor.addEventListener("click", (e)=>{
-    if(e.target.classlist.contains("arti__boton")){             //revisar
-        validarProductoRepetido(e.target.id)
+let carrito = []
+
+document.addEventListener('DOMContentLoaded', () => {
+    if (localStorage.getItem('carrito')){
+        carrito = JSON.parse(localStorage.getItem('carrito'))
+        actualizarCarrito()
     }
-    console.log();
 })
 
-const validarProductoRepetido=(productoId)=>{
-    const productoRepetido= carrito.find(producto=> producto.id==productoId)
+botonVaciar.addEventListener('click', () => {
+    carrito.length = 0
+    actualizarCarrito()
+})
 
-    if(localStorage.getItem("carrito")){
-        carrito=obtenerCarritoStorage()
-    }
-
-    if(!productoRepetido){
-        const producto=productos.find(producto=> producto.id==productoId)
-        carrito.push(producto)
-        pintarProductoCarrito(producto)
-        actualizarTotalesCarrito(carrito)
-    }else{
-        productoRepetido.cantidad++
-        const cantidadProducto= document.getElementById(`cantidad${productoRepetido.id}`)
-        cantidadProducto.innerText= `Cantidad: ${productoRepetido.cantidad}`
-        actualizarTotalesCarrito(carrito)
-    }
-}
-
-const pintarProductoCarrito= (producto)=>{
-    const contenedor= document.getElementById("carrito-contenedor") //hacer contenedor en el html
-    const div= document.createElement("div")
-    div.classList.add("productoEnCarrito")  //hacer esta clase en el css
-    div.innerHTML=`
-        <p>${producto.nombre}</p>
-        <p>Precio: ${producto.precio}</p>
-        <p id=cantidad${producto.id}>Cantidad: ${producto.cantidad}</p>
-        <button class="btn waves-effect waves-light boton-eliminar" value="${producto.id}">X</button>
+stockProductos.forEach((producto) => {
+    const div = document.createElement('div')
+    div.classList.add('producto')
+    div.innerHTML = `
+    <img src=${producto.img} alt= "">
+    <h3>${producto.nombre}</h3>
+    <p>${producto.desc}</p>
+    <p class="precioProducto">Precio:$ ${producto.precio}</p>
+    <button id="agregar${producto.id}" class="boton-agregar">Agregar <i class="fas fa-shopping-cart"></i></button>
     `
-    contenedor.appendChild(div)
-}
+    contenedorProductos.appendChild(div)
 
-const actualizarTotalesCarrito= (carrito)=>{
-    const totalCantidad= carrito.reduce((acc, item)=> acc+item.cantidad, 0)
-    const totalCompra= carrito.reduce((acc, item)=> acc+(item.precio*item.cantidad), 0)
-    
-    pintarTotalesCarrito(totalCantidad, totalCompra)
-    guardarCarritoStorage(carrito)
-}
+    const boton = document.getElementById(`agregar${producto.id}`)
+        boton.addEventListener('click', () => {
+        agregarAlCarrito(producto.id)
+    })
+})
 
-const pintarTotalesCarrito= (totalCantidad, totalCompra)=>{
-    const contadorCarrito= document.getElementById("contador-carrito") //revisar parametro
-    const precioTotal= document.getElementById("precioTotal")  //revisar parametro
-    contadorCarrito.innerText= totalCantidad
-    precioTotal.innerText= totalCompra
-}
+const agregarAlCarrito = (prodId) => {
+    const existe = carrito.some (prod => prod.id === prodId) 
 
-const pintarCarrito= (carrito)=>{
-    const contenedor= document.getElementById("carrito-contenedor") //hacer contenedor en el html
-
-    contenedor.innerHTML=""
-    
-    carrito.forEach(producto => {
-        const div= document.createElement("div")
-        div.classList.add("productoEnCarrito")  //hacer esta clase en el css
-        div.innerHTML=`
-            <p>${producto.nombre}</p>
-            <p>Precio: ${producto.precio}</p>
-            <p id=cantidad${producto.id}>Cantidad: ${producto.cantidad}</p>
-            <button class="btn waves-effect waves-light boton-eliminar" value="${producto.id}">X</button>
-        `
-        contenedor.appendChild(div)
-    });
-    
-}
-
-const eliminarProductoCarrito= (productoId)=>{
-    const productoIndex= carrito.findIndex(producto=> producto.id==productoId)
-    carrito.splice(productoIndex, 1)
-    pintarCarrito(carrito)
-    actualizarTotalesCarrito(carrito)
-}
-
-const guardarCarritoStorage= (carrito)=>{
-    localStorage.setItem("carrito", JSON.stringify(carrito))
-}
-
-const obtenerCarritoStorage= ()=>{
-    const carritoStorage= JSON.parse(localStorage.getItem("carrito"))
-    return carritoStorage
-}
-
-const cargarCarrito= ()=>{
-    if(localStorage.getItem("carrito")){
-        carrito= obtenerCarritoStorage()
-        pintarCarrito(carrito)
-        actualizarTotalesCarrito(carrito)
+    if (existe){ 
+        const prod = carrito.map (prod => { 
+            if (prod.id === prodId){
+                prod.cantidad++
+            }
+        })
+    } else { 
+        const item = stockProductos.find((prod) => prod.id === prodId)
+        carrito.push(item)
     }
+
+    actualizarCarrito() 
+}
+
+const eliminarDelCarrito = (prodId) => {
+    const item = carrito.find((prod) => prod.id === prodId)
+    const indice = carrito.indexOf(item) 
+    carrito.splice(indice, 1) 
+    actualizarCarrito() 
+    console.log(carrito)
+}
+
+const actualizarCarrito = () => {
+    contenedorCarrito.innerHTML = "" 
+    carrito.forEach((prod) => {
+        const div = document.createElement('div')
+        div.className = ('productoEnCarrito')
+        div.innerHTML = `
+        <p>${prod.nombre}</p>
+        <p>Precio:$${prod.precio}</p>
+        <p>Cantidad: <span id="cantidad">${prod.cantidad}</span></p>
+        <button onclick="eliminarDelCarrito(${prod.id})" class="boton-eliminar">X<i class="fas fa-trash-alt"></i></button>
+        `
+
+        contenedorCarrito.appendChild(div)
+        
+        localStorage.setItem('carrito', JSON.stringify(carrito))
+
+    })
+    
+    contadorCarrito.innerText = carrito.length 
+    console.log(carrito)
+    precioTotal.innerText = carrito.reduce((acc, prod) => acc + prod.cantidad * prod.precio, 0)
 }

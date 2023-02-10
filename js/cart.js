@@ -17,27 +17,48 @@ document.addEventListener('DOMContentLoaded', () => {
 })
 
 botonVaciar.addEventListener('click', () => {
-    carrito.length = 0
-    actualizarCarrito()
+    Swal.fire({
+        title: '¿Estás seguro?',
+        text: "Se vaciará el carrito",
+        icon: 'warning',
+        showCancelButton: true,
+        confirmButtonColor: '#3085d6',
+        cancelButtonColor: '#d33',
+        confirmButtonText: 'Si',
+        cancelButtonText:'Cancelar'
+      }).then((result) => {
+        if (result.isConfirmed) {
+          Swal.fire(
+            'Listo!',
+            'Tu carrito ahora está vacío',
+            'success'
+          )
+          carrito.length = 0
+          actualizarCarrito()
+        }
+      })
+    
 })
 
-stockProductos.forEach((producto) => {
-    const div = document.createElement('div')
-    div.classList.add('producto')
-    div.innerHTML = `
-    <img src=${producto.img} alt= "">
-    <h3>${producto.nombre}</h3>
-    <p>${producto.desc}</p>
-    <p class="precioProducto">Precio:$ ${producto.precio}</p>
-    <button id="agregar${producto.id}" class="boton-agregar">Agregar <i class="fas fa-shopping-cart"></i></button>
-    `
-    contenedorProductos.appendChild(div)
+const pintarProducto=(stockProductos)=>{
+    stockProductos.forEach((producto) => {
+        const div = document.createElement('div')
+        div.classList.add('producto')
+        div.innerHTML = `
+        <img src=${producto.img} alt= "">
+        <h3>${producto.nombre}</h3>
+        <p>${producto.desc}</p>
+        <p class="precioProducto">Precio:$ ${producto.precio}</p>
+        <button id="agregar${producto.id}" class="boton-agregar">Agregar <i class="fas fa-shopping-cart"></i></button>
+        `
+        contenedorProductos.appendChild(div)
 
-    const boton = document.getElementById(`agregar${producto.id}`)
-        boton.addEventListener('click', () => {
-        agregarAlCarrito(producto.id)
+        const boton = document.getElementById(`agregar${producto.id}`)
+            boton.addEventListener('click', () => {
+            agregarAlCarrito(producto.id)
+        })
     })
-})
+}
 
 const agregarAlCarrito = (prodId) => {
     const existe = carrito.some (prod => prod.id === prodId) 
@@ -73,7 +94,7 @@ const actualizarCarrito = () => {
         <p>${prod.nombre}</p>
         <p>Precio:$${prod.precio}</p>
         <p>Cantidad: <span id="cantidad">${prod.cantidad}</span></p>
-        <button onclick="eliminarDelCarrito(${prod.id})" class="boton-eliminar">X<i class="fas fa-trash-alt"></i></button>
+        <button onclick="eliminarDelCarrito(${prod.id})" class="boton-eliminar"><i class="fas fa-trash-alt"></i></button>
         `
 
         contenedorCarrito.appendChild(div)
